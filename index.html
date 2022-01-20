@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Cronômetro</title>
+  </head>
+
+  <body class="body body-stopwatch">
+    <div>
+      <div class="main main-stopwatch">
+        <button class="mode mode-stopwatch">Cronômetro</button>
+        <input type="text" class="time" placeholder="00:00:00" />
+        <div class="btns">
+          <button class="btn btn-stopwatch btn-set hidden">Definir</button>
+          <button class="btn btn-stopwatch btn-start">Iniciar</button>
+          <button class="btn btn-stopwatch btn-pause">Pausar</button>
+          <button class="btn btn-stopwatch btn-stop">Zerar</button>
+        </div>
+      </div>
+    </div>
+
+    <audio src="Som de BI.mp3" class="notification"></audio>
+
+    <div class="overlay hidden"></div>
+
+    <div class="modal modal-set hidden">
+      <p class="text-hour">horas</p>
+      <p class="text-minute">minutos</p>
+      <input type="number" min="0" max="100" class="time timer-hour" />
+      <input type="number" min="0" max="59" class="time timer-minute" />
+      <button class="btn btn-save">Salvar</button>
+      <button class="btn btn-close">Fechar</button>
+    </div>
+
+    <div class="modal modal-rest hidden">
+      <p class="text-pomodoro">Parabéns você completou 1 pomodoro!</p>
+      <button class="btn btn-rest">Descansar</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
